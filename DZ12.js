@@ -1,11 +1,13 @@
 
-
+let rastoynie = documentdocument.getElementById('rastoynie')
+let time = documentdocument.getElementById('time')
 function f1(g,t) {
     let s = (g / t)
-    g=+Number(g)
-    t=+Number(t)
-    $('#but1').html('<h3>Нужно двигать со Скоростью ' + s.toFixed(2) + ' км/ч</h3>')
-   if (t <= 0)  {
+    let g = +rastoynie.value
+    let t = +time.value
+   $('#brut').html('<h3>Нужно двигать со Скоростью ' + s.toFixed(2) + ' км/ч</h3>')
+
+     if(t <= 0)  {
         $('#brut').html('<h3>Время не может быть отрицательным.</h3>')
     }
     else if (g <= 0){
@@ -19,7 +21,7 @@ function f1(g,t) {
         f1($('#rastoynie').val(''), $('#time').val(''))
     })
     $("#tuk").click( function(){ $("h3").text("")
- } )
+    } )
 
 function f2(d,c) {
     let sh = Math.floor(d / c)
