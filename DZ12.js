@@ -1,26 +1,14 @@
-let r = document.getElementById('rastoynie')
- let t = document.getElementById('time')
-let d = document.getElementById('mani')
-let scor = document.getElementById('scor')
-let c = document.getElementById('cena')
-let rub1 = document.getElementById('rub1')
-let rub2 = document.getElementById('rub2')
-let et = document.getElementById('eput1')
-let s1 = document.getElementById('sput2')
-let eu = 90.2
-let u = 84.4
-let reset = document.getElementById('typ')
+
 
 function f1(r,t) {
     let s = (r / t)
     $('#but1').html('<h3>Нужно двигать со Скоростью ' + s.toFixed(2) + ' км/ч</h3>')
-    if (r < t) {
-        $('#but1').html('<h3>Ввели непральные часы часов</h3>')
+   if (t <= 0)  {
+        $('#brut').html('<h3>Время не может быть отрицательным.</h3>')
     }
-    else if (t < 0) {
-        $('#but1').html('<h3>Время не может быть отрицательным.</h3>')
+    else if (g <= 0){
+       $('#brut').html('<h3>Вы указали не правильное растояние.</h3>')
     }
-
 }
     $('#scor').click(function () {
         f1($('#rastoynie').val(), $('#time').val())
@@ -52,6 +40,9 @@ function f2(d,c) {
         f2($('#mani').val(''), $('#cena').val(''))
     })
     $("#tyk").click( function(){ $("h3").text("") } )
+
+let eu = 90.2
+let u = 84.4
 
 function f3(et) {
     let ok = Math.floor(et * eu) / u
