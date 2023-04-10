@@ -20,8 +20,7 @@
 
 function f1(g,t) {
     let s = (g / t)
-    g=Number(g)
-    t=Number(t)
+  
     $('#brut').html('<h3>Нужно двигать со Скоростью ' + s.toFixed(2) + ' км/ч</h3>')
 
     if (t <= 0) {
@@ -43,8 +42,7 @@ function f2(d,c) {
     let sh = Math.floor(d / c)
     let o = (sh * c)
     let p = (d - o)
-    d=Number(d)
-    c=Number(c)
+   
     $('#bryt').html('<h3>Можно купить: ' + sh + ' шоколадки <h3> <h3>Остается: ' + p + ' рублей</h3>')
       if (d < c){
         $('#bryt').html('<h3>Цена шоколада больше чем денег, вы не купите ее!</h3>')
