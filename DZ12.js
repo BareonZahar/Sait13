@@ -2,8 +2,8 @@
 
 function f1(g,t) {
     let s = (g / t)
-    g=Number(g)
-    t=Number(t)
+    g=+Number(g)
+    t=+Number(t)
     $('#but1').html('<h3>Нужно двигать со Скоростью ' + s.toFixed(2) + ' км/ч</h3>')
    if (t <= 0)  {
         $('#brut').html('<h3>Время не может быть отрицательным.</h3>')
